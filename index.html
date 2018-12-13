@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATM</title>
+
+    <link rel="stylesheet" href=css/atm.css>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-sm-12 jumbotron">
+                <h1 id='message1'>Welcome, valued customer.</h1>
+                <h2 id='message2'>Please insert your card. Then, touch start.</h2>
+                <button id='start' class='btn btn-success'>Start</button>
+            </div>
+        </div>
+    </div> -->
+    <!-- <h2>TODO</h2>
+    <ul>
+        <li class='strike'>test</li>
+        <li>make a deposit</li>
+        <li>checking/savings</li>
+        <li>atm fees</li>
+        <li>language</li>
+        <li>receipt</li>
+        <li>check balance</li>
+        <li>fast cash</li>
+        <li>transfer funds</li>
+        <li>change pin</li>
+        <li>disabilities</li>
+    </ul>
+    <h2>VARIABLES</h2>
+    <ul>
+        <li>SET pin equal to 0</li>
+        <li>SET card number equal to 0</li>
+        <li>SET amount equal to 0</li>
+        <li>SET balance equal to 0</li>
+        <li>SET withdrawal equal to 0</li>
+    </ul>
+    <h2>DASHBOARD</h2>
+
+        <h2>LANGUAGE</h2>
+        <ul>
+            <li>DISPLAY English or Espanol</li>
+            <li>BUTTON English
+                <li>IF English, DISPLAY dashboard /content in English</li>
+            </li>
+            <li>BUTTON Espanol
+                <li>IF Espanol is clicked, DISPLAY dashboard/content in Espanol</li>
+            </li>
+        </ul>
+        
+        <h2>CHECK BALANCE</h2>
+        <ul>
+            <li>DISPLAY Insert Debit Card</li>
+            <li>INPUT Debit card</li>
+            <li>DISPLAY Enter your PIN</li>
+            <li>INPUT pin</li>
+            <li>GET card number</li>
+
+            <h2>MODULE checkCard</h2>
+            <ul>
+                Check records(object) to see if pin matches card number 
+                <li>IF card number is applicable</li>
+                    <li>IF pin number matches card number in records</li>
+                        <li>MODULE getCash</li>
+                    <li>ELSE DISPLAY Invalid PIN, Try again</li>
+                        <li>INPUT pin</li>
+                        <li>MODULE CheckCard</li>
+                <li>ELSE DISPLAY "Card Invalid. Please insert a Debit Card."</li>
+            </ul>
+
+            <h2>MODULE getBalance</h2>
+            <ul>
+                <li>DISPLAY 'Which account would you like to see the balance for? Checking or Savings</li>
+                <li>INPUT checking/savings</li>
+                
+                <li>Use var card number to find available balance</li>
+                    <li>return balance</li>
+            </ul>
+        </ul>
+        
+        <h2>WITHDRAWAL</h2>
+        <ul>
+            <li>DISPLAY Insert Debit Card</li>
+            <li>INPUT Debit card</li>
+            <li>DISPLAY Enter your PIN</li>
+            <li>INPUT pin</li>
+            <li>GET card number</li>
+
+            <h2>MODULE checkCard</h2>
+            <ul>
+                 Check records(object) to see if pin matches card number
+                <li>IF card number is applicable
+                    <li>IF pin number matches card number in records
+                        <li>MODULE getCash</li>
+                    </li>
+                    <li>ELSE DISPLAY Invalid PIN, Try again
+                        <li>INPUT pin</li>
+                        <li>MODULE CheckCard</li>
+                    </li>
+                </li>
+                <li>ELSE DISPLAY Card Invalid. Please insert a Debit Card.</li>
+            </ul>
+
+            <h2>MODULE getCash</h2>
+            <ul>
+                <li>Use card number to find available balance
+                    <li>DISPLAY Enter an amount to withdraw. (divisable by $20)</li>
+                    <li>INPUT amount</li>
+                    <li>withdraw gets balance - amount</li>
+                    <li>IF withdrawal is greater than or equal to 0</li>
+                        <li>DISPLAY withdrawal is being dispensed below. Would you like to do anything else?</li>
+                        <li>INPUT YES/NO</li>
+                    <li>ELSE DISPLAY Insufficient funds</li>
+                </li>
+            </ul>
+
+            <h2>EXIT</h2>
+            <ul>
+                <li>DISPLAY Exit button</li>
+                <li>MODULE exit
+                    <li>SET exit = false</li>
+                    <li>IF Exit button clicked
+                        <li>DISPLAY Are you sure?</li>
+                        <li>INPUT yes/no</li>
+                        <li>IF yes
+                            <li>exit = true</li>
+                        </li>
+                    </li>
+                    <li>IF exit
+                        <li>PRINT receipt</li>
+                    </li>
+                </li>
+            </ul>
+        </ul>
+
+        <h2>ADDITIONAL MODULES</h2>
+        <ul>
+            <li>MODULE fees
+                <li>SET fees = true</li>
+                <li>SET cardFormat</li>
+                <li>IF cardNumber matches bank cardFormat
+                    <li>fees = false</li>
+                </li>
+                <li>IF fees
+                    <li>balance - $2.50</li>
+                </li> 
+            </li>
+        </ul> -->
+    <div class="container main">
+        <div class="row top">
+            <div class="col-sm-12">
+                <h1>ATM</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="inter">
+                <div class="col-sm-2 but1">
+                    <button id=opbut1></button><br>
+                    <button id=opbut2></button><br>
+                    <button id=opbut3></button><br>
+                </div>
+                <div class="col-sm-4 scolumn">
+                    <div class='screen'>
+                        <div class="col-sm-4 group1">
+                            <h3 id='option1'></h3>
+                            <h3 id='option2'></h3>
+                            <h3 id='option3'></h3>
+                        </div>
+                        <div class="col-sm-4" id="content">
+                            <h2>INSERT CARD<br> BY CLICKING IT.</h2>
+                        </div>
+                        <div class="col-sm-4 group2">
+                            <h4 id='option4'></h4>
+                            <h4 id='option5'></h4>
+                            <h4 id='option6'></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2 but2">
+                    <button id=opbut4></button><br>
+                    <button id=opbut5></button><br>
+                    <button id=opbut6></button><br>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="col-sm-4">
+                    <h2>Card</h2>
+                    <button class=card></button><br>
+                    <div class="row">
+                        <div class="col-sm-12 image">
+                            <img src="images/card.png" id="card">
+                        </div>
+                    </div>
+
+                    <h2>Cash</h2>
+                    <button class=cash></button><br>
+                    
+                </div> 
+            </div>
+        </div>
+        <div class="row pad">
+            <div class="col-sm-6 buttons">
+                <button id='button1' value=1>1</button>
+                <button id='button2' value=2>2</button>
+                <button id='button3' value=3>3</button><br>
+                <button id='button4' value=4>4</button>
+                <button id='button5' value=5>5</button>
+                <button id='button6' value=6>6</button><br>
+                <button id='button7' value=7>7</button>
+                <button id='button8' value=8>8</button>
+                <button id='button9' value=9>9</button><br>
+                <button id='delete' value='clear'>&larr;</button>
+                <button id='button0' value=0>0</button>
+                <button id='space' value=' '>&rarr;</button>
+            </div>
+            <div class="col-sm-2 buttons2">
+                <button class=cancel id=cancel>Cancel</button>
+                <button class=clear id=clear>Clear</button>
+                <button class=enter id=enter>Enter</button>
+            </div>
+            <div class="col-sm-4 receipt">
+                <h2>Receipt</h2>
+                <button></button>
+            </div>
+        </div> 
+        <div class="row">
+           <div class="col-sm-4">
+                <div class="receiptpaper" id="receiptpaper"></div>
+           </div>
+        </div>
+        
+    </div>
+    
+    <script src='js/atm.js'></script>
+</body>
+</html>
